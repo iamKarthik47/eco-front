@@ -1,0 +1,139 @@
+/* RegistrationPage.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('https://img.freepik.com/free-photo/tranquil-scene-nature-beauty-majestic-mountain-landscape-generated-by-artificial-intelligence_25030-65564.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1715040000&semt=ais') no-repeat center center fixed;
+  background-size: cover;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  z-index: -2;
+}
+
+.raindrops {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  background-image: url('https://i.pinimg.com/originals/ba/5b/61/ba5b613b625e1013284f588943cd6e15.gif');
+  background-size: cover;
+  z-index: -1;
+  pointer-events: none; /* Ensures it does not interfere with form interaction */
+}
+
+.registration-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 50px); /* Adjust for the height of the navbar */
+  position: relative;
+}
+
+.registration-form-container {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+  width: 400px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  z-index: 1;
+  margin-top: 50px; /* Adjust for the height of the navbar */
+}
+
+.registration-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: background-image 1s ease-in-out; /* Smooth transition for the gradient */
+}
+
+.registration-input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.registration-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+.registration-input {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 40px;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 20px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.5);
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.registration-input:focus {
+  border-color: #1db954;
+  box-shadow: 0 0 5px rgba(29, 185, 84, 0.5);
+  outline: none;
+}
+
+.registration-input-error {
+  border-color: #f00 !important; /* Highlight input with red border */
+}
+
+.registration-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #3a8dff;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.registration-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+
+.registration-button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.registration-button:hover {
+  background-color: #1e64e8;
+}
+
+.registration-error {
+  color: #f00;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  text-align: left;
+}
