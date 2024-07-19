@@ -1,0 +1,151 @@
+/* LoginPage.css */
+
+.login-page-body, .login-page-html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+}
+
+.login-page-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('https://img.freepik.com/free-photo/tranquil-scene-nature-beauty-majestic-mountain-landscape-generated-by-artificial-intelligence_25030-65564.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1715040000&semt=ais') no-repeat center center fixed;
+  background-size: cover;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  z-index: -2;
+}
+
+.login-page-raindrops {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  background-image: url('https://i.pinimg.com/originals/ba/5b/61/ba5b613b625e1013284f588943cd6e15.gif');
+  background-size: cover;
+  z-index: -1;
+  pointer-events: none; /* Ensures it does not interfere with form interaction */
+}
+
+.login-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 0; /* Ensures form is above background and raindrops */
+  position: relative;
+}
+
+.login-page-form-container {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+  width: 400px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  z-index: 1;
+}
+
+.login-page-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.login-page-input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.login-page-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+.login-page-input {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 40px;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 20px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.5);
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.login-page-input:focus {
+  border-color: #1db954;
+  box-shadow: 0 0 5px rgba(29, 185, 84, 0.5);
+  outline: none;
+}
+
+.login-page-input-error {
+  border-color: #f00 !important; /* Highlight input with red border */
+}
+
+.login-page-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #3a8dff;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-page-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+
+.login-page-button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.login-page-button:hover {
+  background-color: #1e64e8;
+}
+
+.login-page-error {
+  color: #f00;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.login-page-signup-link {
+  margin-top: 1rem;
+  color: #ffffff;
+}
+
+.login-page-signup-link a {
+  color: #3a8dff;
+  text-decoration: none;
+}
+
+.login-page-signup-link a:hover {
+  text-decoration: underline;
+}

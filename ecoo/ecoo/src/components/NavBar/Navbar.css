@@ -1,0 +1,40 @@
+/* Navbar.css */
+.navbar {
+  background-color: #343a40; /* Dark background color */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure navbar is above other elements */
+  width: 100%;
+}
+
+.navbar-brand {
+  color: #ffffff; /* White text color */
+  cursor: pointer;
+}
+
+.nav-link {
+  color: #ffffff; /* White text color for links */
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #cccccc; /* Lighter color on hover */
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.buttons .btn {
+  margin-left: 10px;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
